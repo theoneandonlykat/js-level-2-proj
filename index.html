@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "Stylesheet" href="styles.css">
+    <title>Guess that Pokemon!</title>
+</head>
+<body onload = "initialize()">
+    <h1>Guess that pokemon!</h1>
+    <br>
+    <div class = "buttons">
+    <button onclick = "toggleRulesetVisibility()">Rules</button>
+    <span id = "overview"></span>
+    <button onclick = "reset()">Reset</button>
+    </div>
+    
+    <br>
+    <div class = "hiddens" id = "ruleset">Welcome to Guess that Pokemon! In this game, you'll have to match pairs of pokemon cards with the same image. 
+                        Matching all 16 cards will win you the game. If you manage to match a pair, those cards will stay flipped. If 
+                        you don't manage to match a pair, both cards you select will be flipped back after a second or so.</div>
+    <div class = "hiddens" id = "win">Congratulations, you've won! Wanna play again? Click <a href = "index.html">here</a></div>
+    <div class = "cards">
+        <img src = "pokemoncard.png" id = "0"  onclick = "engine(0)"> 
+        <img src = "pokemoncard.png" id = "1"  onclick = "engine(1)">
+        <img src = "pokemoncard.png" id = "2"  onclick = "engine(2)"> 
+        <img src = "pokemoncard.png" id = "3"  onclick = "engine(3)"> 
+        <img src = "pokemoncard.png" id = "4"  onclick = "engine(4)">
+        <img src = "pokemoncard.png" id = "5"  onclick = "engine(5)"> 
+        <img src = "pokemoncard.png" id = "6"  onclick = "engine(6)"> 
+        <img src = "pokemoncard.png" id = "7"  onclick = "engine(7)"> 
+        <img src = "pokemoncard.png" id = "8"  onclick = "engine(8)"> 
+        <img src = "pokemoncard.png" id = "9"  onclick = "engine(9)"> 
+        <img src = "pokemoncard.png" id = "10" onclick = "engine(10)">
+        <img src = "pokemoncard.png" id = "11" onclick = "engine(11)">
+        <img src = "pokemoncard.png" id = "12" onclick = "engine(12)">
+        <img src = "pokemoncard.png" id = "13" onclick = "engine(13)">  
+        <img src = "pokemoncard.png" id = "14" onclick = "engine(14)">
+        <img src = "pokemoncard.png" id = "15" onclick = "engine(15)">
+</div>
+<script src = "main.js"></script>
+</body>
+</html>
