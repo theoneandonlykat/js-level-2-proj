@@ -39,7 +39,7 @@ function checkWin()
 
 function update()
 {
-    overview.innerHTML = "Moves: "+moves+" Matches: "+correctMoves+" Accuracy: "+accuracy;
+    overview.innerHTML = "Score: "+moves+" Matches: "+correctMoves+" Accuracy: "+accuracy;
 }
 
 function shuffle (){
@@ -65,6 +65,8 @@ function toggleRulesetVisibility()
 }
 
 function display(position){
+    moves++;
+    update()
     let card = document.getElementById(position);
     if (list[position] == 1){
         card.setAttribute("src","Pikachu.webp");
@@ -97,7 +99,6 @@ function engine(position){
     if (lastFlipped != null){
         if (check(card,lastFlipped))
         {
-            moves++
             correctMoves++;
             setAccuracy()
             update()
@@ -108,8 +109,7 @@ function engine(position){
             setTimeout(() => {
             card.setAttribute("src","pokemoncard.png");
             last.setAttribute("src","pokemoncard.png");
-        }, 300);
-        moves++;
+        }, 250);
         setAccuracy()
         update()
         checkWin()
