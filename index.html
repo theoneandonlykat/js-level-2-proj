@@ -12,10 +12,8 @@
     <br>
     <div class = "buttons">
     <button onclick = "toggleRulesetVisibility()">Rules</button>
-    <span id = "overview"></span>
-    <button onclick = "reset()">Reset</button>
     </div>
-    
+
     <br>
     <div class = "hiddens" id = "ruleset">Welcome to Guess that Pokemon! In this game, you'll have to match pairs of pokemon cards with the same image. 
                         Matching all 16 cards will win you the game. If you manage to match a pair, those cards will stay flipped. If 
@@ -39,6 +37,11 @@
         <img src = "pokemoncard.png" id = "14" onclick = "engine(14)">
         <img src = "pokemoncard.png" id = "15" onclick = "engine(15)">
 </div>
+<div id = "container">
+    <button onclick = "reset()">Reset</button><br>
+    <span id = "overview"></span>
+</div>
+
 <script src = "main.js"></script>
 </body>
 </html>
